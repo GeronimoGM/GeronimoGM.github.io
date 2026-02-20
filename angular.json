@@ -7,6 +7,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "GeronimoGM.github.io": {
+      "i18n": {
+        "sourceLocale": "es-AR",
+        "locales": {
+          "en-US": "src/locale/messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -35,6 +41,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize": ["en-US"],
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -43,7 +50,8 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": ["src/styles.css"],
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
             "production": {
