@@ -23,6 +23,7 @@ import { Svg } from '../svg/svg';
       </nav>
       <app-overlay [buttonLabel]="themeLabel()" [buttonIcon]="theme()" [(visible)]="visible">
         <button
+          i18n="@@theme.light"
           class="w-full"
           (click)="visible.set(true)"
           app-button
@@ -35,6 +36,7 @@ import { Svg } from '../svg/svg';
           Claro
         </button>
         <button
+          i18n="@@theme.dark"
           class="w-full"
           (click)="visible.set(true)"
           app-button
@@ -47,6 +49,7 @@ import { Svg } from '../svg/svg';
           Oscuro
         </button>
         <button
+          i18n="@@theme.system"
           class="w-full"
           (click)="visible.set(true)"
           app-button
