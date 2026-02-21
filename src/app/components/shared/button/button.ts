@@ -51,6 +51,8 @@ export class Button {
         return 'bg-accent text-text-contrast hover:bg-accent/80';
       case 'highlight':
         return 'bg-highlight text-text-contrast hover:bg-highlight/80';
+      case 'simple':
+        return 'bg-transparent border-transparent text-text-primary hover:text-accent';
     }
   });
 }
