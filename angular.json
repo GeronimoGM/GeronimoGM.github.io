@@ -8,9 +8,12 @@
   "projects": {
     "GeronimoGM.github.io": {
       "i18n": {
-        "sourceLocale": "es-AR",
+        "sourceLocale": "es",
         "locales": {
-          "en-US": "src/locale/messages.en.xlf"
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          }
         }
       },
       "projectType": "application",
@@ -41,7 +44,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "localize": ["en-US"],
+            "localize": ["en"],
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -85,6 +88,9 @@
             },
             "development": {
               "buildTarget": "GeronimoGM.github.io:build:development"
+            },
+            "en": {
+              "buildTarget": "GeronimoGM.github.io:build:development:en"
             }
           },
           "defaultConfiguration": "development"
