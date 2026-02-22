@@ -148,21 +148,19 @@ export class IndexPage {
     time: $localize`:@@compraaca.time:Enero 2025 - Presente`,
     imgSrc: 'assets/img/compraaca-cover.png',
     imgAlt: $localize`:@@compraaca.imgAlt:Previsualización de la página de CompraAcá`,
-    routerLink: '/experience/compraaca', // TODO: cambiar
+    href: 'https://compraaca.com.ar',
     position: 'Founder & Full Stack Developer',
     company: 'CompraAcá',
     summary: $localize`:@@compraaca.summary:Plataforma que ayuda a comercios locales y emprendimientos a tener presencia digital sin complejidad técnica. Permite publicar productos, recibir pedidos en tiempo real y administrar su tienda online de manera intuitiva y eficiente.`,
-    externalLink: 'https://compraaca.com.ar',
   };
   protected readonly utnEmpleos: Experience = {
     time: $localize`:@@utn-empleos.time:Junio 2024 - Presente`,
     imgSrc: 'assets/img/utn-empleos-cover.webp',
     imgAlt: $localize`:@@utn-empleos.imgAlt:Previsualización de la página de UTN Empleos`,
-    routerLink: '/experience/utn-empleos', // TODO: cambiar
+    href: 'https://bolsatrabajo.mdp.utn.edu.ar',
     position: 'Full Stack Developer',
-    company: 'Universidad Tecnológica Nacional',
+    company: 'UTN Empleos',
     summary: $localize`:@@utn-empleos.summary:Plataforma institucional orientada a conectar estudiantes y graduados con oportunidades laborales. Permite la publicación y gestión de ofertas, facilitando el vínculo entre empresas y la comunidad académica.`,
-    externalLink: 'https://bolsatrabajo.mdp.utn.edu.ar',
   };
 
   protected readonly educations: Education[] = [

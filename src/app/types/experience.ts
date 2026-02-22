@@ -2,9 +2,8 @@ export interface Experience {
   time: string;
   imgSrc: string;
   imgAlt: string;
-  routerLink: string;
+  href: string;
   position: string;
   company: string;
   summary: string;
-  externalLink: string;
 }
