@@ -1,6 +1,6 @@
 {
-  "name": "geronimo-gm.github.io",
-  "version": "0.0.0",
+  "name": "portfolio",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

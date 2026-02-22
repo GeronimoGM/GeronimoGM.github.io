@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "GeronimoGM.github.io": {
+    "portfolio": {
       "i18n": {
         "sourceLocale": "es",
         "locales": {
@@ -88,13 +88,13 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "GeronimoGM.github.io:build:production"
+              "buildTarget": "portfolio:build:production"
             },
             "development": {
-              "buildTarget": "GeronimoGM.github.io:build:development"
+              "buildTarget": "portfolio:build:development"
             },
             "en": {
-              "buildTarget": "GeronimoGM.github.io:build:development:en"
+              "buildTarget": "portfolio:build:development:en"
             }
           },
           "defaultConfiguration": "development"
