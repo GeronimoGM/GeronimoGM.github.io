@@ -17,7 +17,7 @@ import { Experience } from '../../types/experience';
         <div class="flex items-center gap-4 mb-2">
           <img
             class="size-24 object-cover rounded-full ring-2 ring-highlight"
-            src="/assets/img/me.jpeg"
+            src="assets/img/me.jpeg"
             alt="Foto de perfil de Gerónimo"
           />
           <div>
@@ -142,11 +142,11 @@ import { Experience } from '../../types/experience';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IndexPage {
-  protected readonly cvHref = $localize`:@@cv.href:/assets/pdf/cv-es.pdf`;
+  protected readonly cvHref = $localize`:@@cv.href:assets/pdf/cv-es.pdf`;
 
   protected readonly compraaca: Experience = {
     time: $localize`:@@compraaca.time:Enero 2025 - Presente`,
-    imgSrc: '/assets/img/compraaca-cover.png',
+    imgSrc: 'assets/img/compraaca-cover.png',
     imgAlt: $localize`:@@compraaca.imgAlt:Previsualización de la página de CompraAcá`,
     routerLink: '/experience/compraaca', // TODO: cambiar
     position: 'Founder & Full Stack Developer',
@@ -156,7 +156,7 @@ export class IndexPage {
   };
   protected readonly utnEmpleos: Experience = {
     time: $localize`:@@utn-empleos.time:Junio 2024 - Presente`,
-    imgSrc: '/assets/img/utn-empleos-cover.webp',
+    imgSrc: 'assets/img/utn-empleos-cover.webp',
     imgAlt: $localize`:@@utn-empleos.imgAlt:Previsualización de la página de UTN Empleos`,
     routerLink: '/experience/utn-empleos', // TODO: cambiar
     position: 'Full Stack Developer',
@@ -168,7 +168,7 @@ export class IndexPage {
   protected readonly educations: Education[] = [
     {
       time: $localize`:@@utn.time:Marzo 2022 - Febrero 2025`,
-      imgSrc: '/assets/img/utn-logo.png',
+      imgSrc: 'assets/img/utn-logo.png',
       imgAlt: $localize`:@@utn.imgAlt:Logo de la Universidad Tecnológica Nacional`,
       degree: $localize`:@@utn.degree:Tecnicatura Universitaria en Programación`,
       university: 'Universidad Tecnológica Nacional',
@@ -176,7 +176,7 @@ export class IndexPage {
     },
     {
       time: $localize`:@@cambridge.time:Diciembre 2024`,
-      imgSrc: '/assets/img/cambridge-logo.webp',
+      imgSrc: 'assets/img/cambridge-logo.webp',
       imgAlt: $localize`:@@cambridge.imgAlt:Logo de Cambridge`,
       degree: 'First Certificate in English (B2)',
       university: 'Cambridge University',

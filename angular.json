@@ -11,8 +11,7 @@
         "sourceLocale": "es",
         "locales": {
           "en": {
-            "translation": "src/locale/messages.en.xlf",
-            "baseHref": "/en/"
+            "translation": "src/locale/messages.en.xlf"
           }
         }
       },
@@ -44,9 +43,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "localize": [
-              "en"
-            ],
+            "localize": ["en"],
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -55,12 +52,8 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "polyfills": [
-              "@angular/localize/init"
-            ],
+            "styles": ["src/styles.css"],
+            "polyfills": ["@angular/localize/init"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
