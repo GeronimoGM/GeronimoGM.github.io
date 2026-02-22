@@ -1,13 +1,13 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --localize",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:GeronimoGM.github.io": "node dist/GeronimoGM.github.io/server/server.mjs"
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
