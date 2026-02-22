@@ -1,9 +1,16 @@
 {
-  "buildCommand": "npm run build",
-  "routes": [
+  "version": 2,
+  "public": true,
+  "name": "angular-ssr",
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/api"
+      "source": "/(.*)",
+      "destination": "/api/index"
     }
-  ]
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/portfolio/**"
+    }
+  }
 }
