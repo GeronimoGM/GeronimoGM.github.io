@@ -374,5 +374,43 @@
     <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
     <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
   </symbol>
+  <!-- Argentina -->
+  <symbol id="flag-ar" viewBox="0 0 640 480">
+    <path fill="#74acdf" d="M0 0h640v480H0z" />
+    <path fill="#fff" d="M0 160h640v160H0z" />
+
+    <g id="ar-flag-sun" transform="translate(-64)scale(.96)">
+      <path id="ar-flag-ray-a" fill="#f6b40e" stroke="#85340a" stroke-width="1.1"
+        d="m396.8 251.3 28.5 62s.5 1.2 1.3.9c.8-.4.3-1.6.3-1.6l-23.7-64m-.7 24.2c-.4 9.4 5.4 14.6 4.7 23s3.8 13.2 5 16.5c1 3.3-1.2 5.2-.3 5.7 1 .5 3-2.1 2.4-6.8s-4.2-6-3.4-16.3-4.2-12.7-3-22" />
+      <use href="#ar-flag-ray-a" transform="rotate(22.5 400 250)" />
+      <use href="#ar-flag-ray-a" transform="rotate(45 400 250)" />
+      <use href="#ar-flag-ray-a" transform="rotate(67.5 400 250)" />
+    </g>
+
+    <use href="#ar-flag-sun" transform="rotate(90 320 240)" />
+    <use href="#ar-flag-sun" transform="rotate(180 320 240)" />
+    <use href="#ar-flag-sun" transform="rotate(-90 320 240)" />
+
+    <circle cx="320" cy="240" r="26.7" fill="#f6b40e" stroke="#85340a" stroke-width="1.4" />
+  </symbol>
+  <!-- United States -->
+  <symbol id="flag-us" viewBox="0 0 640 480">
+    <path fill="#bd3d44" d="M0 0h640v480H0" />
+    <path stroke="#fff" stroke-width="37"
+      d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640" />
+    <path fill="#192f5d" d="M0 0h364.8v258.5H0" />
+
+    <defs>
+      <marker id="us-flag-star" markerHeight="30" markerWidth="30">
+        <path fill="#fff" d="m14 0 9 27L0 10h28L5 27z" />
+      </marker>
+    </defs>
+
+    <path
+      fill="none"
+      marker-mid="url(#us-flag-star)"
+      d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z"
+    />
+  </symbol>
 
 </svg>

@@ -21,7 +21,7 @@ import { Button } from '../button/button';
       <!-- Overlay -->
       @if (visible()) {
         <div
-          class="flex flex-col items-end absolute top-full -left-15 bg-bg-secondary border border-border rounded-xl shadow-lg z-50"
+          class="flex flex-col items-end absolute top-full -left-5 bg-bg-secondary border border-border rounded-xl shadow-lg z-50"
           (click)="$event.stopPropagation()"
         >
           <ng-content></ng-content>

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { LanguageService } from '../../../services/language-service';
 import { ThemeService } from '../../../services/theme-service';
 import { Theme } from '../../../types/theme';
 import { Button } from '../button/button';
@@ -25,7 +26,6 @@ import { Svg } from '../svg/svg';
         <button
           i18n="@@theme.light"
           class="w-full"
-          (click)="visible.set(true)"
           app-button
           variant="simple"
           icon="light"
@@ -38,7 +38,6 @@ import { Svg } from '../svg/svg';
         <button
           i18n="@@theme.dark"
           class="w-full"
-          (click)="visible.set(true)"
           app-button
           variant="simple"
           icon="dark"
@@ -51,7 +50,6 @@ import { Svg } from '../svg/svg';
         <button
           i18n="@@theme.system"
           class="w-full"
-          (click)="visible.set(true)"
           app-button
           variant="simple"
           icon="system"
@@ -60,6 +58,34 @@ import { Svg } from '../svg/svg';
           (click)="changeTheme('system')"
         >
           Sistema
+        </button>
+      </app-overlay>
+      <app-overlay
+        [buttonLabel]="languageLabel()"
+        [buttonIcon]="languageIcon()"
+        [(visible)]="languageVisible"
+      >
+        <button
+          class="w-full"
+          app-button
+          variant="simple"
+          icon="flag-ar"
+          size="sm"
+          iconSize="xs"
+          (click)="changeLanguage('es')"
+        >
+          Español
+        </button>
+        <button
+          class="w-full"
+          app-button
+          variant="simple"
+          icon="flag-us"
+          size="sm"
+          iconSize="xs"
+          (click)="changeLanguage('en')"
+        >
+          English
         </button>
       </app-overlay>
     </div>
@@ -72,11 +98,13 @@ import { Svg } from '../svg/svg';
 })
 export class Header {
   private readonly themeService = inject(ThemeService);
+  private readonly languageService = inject(LanguageService);
 
   protected readonly visible = signal(false);
+  protected readonly languageVisible = signal(false);
   protected readonly theme = this.themeService.selectedTheme;
 
-  protected readonly themeLabel = () => {
+  protected readonly themeLabel = computed(() => {
     switch (this.theme()) {
       case 'light':
         return $localize`:@@theme.light:Claro`;
@@ -85,10 +113,20 @@ export class Header {
       case 'system':
         return $localize`:@@theme.system:Sistema`;
     }
-  };
+  });
+
+  protected readonly languageLabel = () =>
+    this.languageService.locale === 'en' ? 'English' : 'Español';
+  protected readonly languageIcon = () =>
+    this.languageService.locale === 'en' ? 'flag-us' : 'flag-ar';
 
   protected changeTheme(theme: Theme) {
     this.visible.set(false);
     this.themeService.setTheme(theme);
+  }
+
+  protected changeLanguage(language: 'es' | 'en') {
+    this.languageVisible.set(false);
+    this.languageService.changeLanguage(language);
   }
 }
