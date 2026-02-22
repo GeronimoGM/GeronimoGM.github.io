@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr:GeronimoGM.github.io": "node dist/GeronimoGM.github.io/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -29,7 +30,10 @@
     "@angular/forms": "^21.1.0",
     "@angular/localize": "^21.1.5",
     "@angular/platform-browser": "^21.1.0",
+    "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
+    "@angular/ssr": "^21.1.4",
+    "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -38,6 +42,8 @@
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
     "prettier": "^3.8.1",
