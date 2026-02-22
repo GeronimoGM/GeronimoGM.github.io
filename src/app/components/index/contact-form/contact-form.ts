@@ -14,7 +14,7 @@ import { Button } from '../../shared/button/button';
       <div>
         <label for="email"> Email </label>
         <input
-          class="border rounded-md p-2 outline-accent outline-offset-1 focus:outline-2"
+          class="border rounded-md p-2 outline-highlight outline-offset-1 focus:outline-2"
           type="email"
           id="email"
           name="email"
@@ -42,7 +42,7 @@ import { Button } from '../../shared/button/button';
       <div>
         <label i18n="@@form.message" for="message"> Mensaje </label>
         <textarea
-          class="border rounded-md p-2 outline-accent outline-offset-1 focus:outline-2"
+          class="border rounded-md p-2 outline-highlight outline-offset-1 focus:outline-2"
           id="message"
           name="message"
           formControlName="message"
