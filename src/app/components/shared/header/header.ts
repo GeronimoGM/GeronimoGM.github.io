@@ -14,7 +14,7 @@ import { Svg } from '../svg/svg';
     </a>
     <div class="flex items-center gap-4">
       <nav
-        class="self-start items-center justify-between gap-4 flex text-sm [&>a]:text-text-secondary [&>a]:hover:text-accent [&>a]:transition-colors [&>a]:duration-300 [&>a]:border-b [&>a]:border-transparent [&>a]:hover:border-accent translate-y-0.5"
+        class="hidden self-start items-center justify-between gap-4 sm:flex text-sm [&>a]:text-text-secondary [&>a]:hover:text-accent [&>a]:transition-colors [&>a]:duration-300 [&>a]:border-b [&>a]:border-transparent [&>a]:hover:border-accent translate-y-0.5"
       >
         <a href="#">Sobre mí</a>
         <a href="#">Experiencia</a>

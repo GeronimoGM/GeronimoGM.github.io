@@ -6,7 +6,7 @@ import { Education } from '../../../types/education';
   imports: [],
   template: `
     <article class="flex flex-col gap-4 px-responsive py-6 lg:flex-row">
-      <p class="text-text-secondary w-1/4">{{ education().time }}</p>
+      <p class="text-text-secondary lg:w-1/4">{{ education().time }}</p>
       <div class="flex gap-4">
         <img
           class="object-cover h-16 rounded"
