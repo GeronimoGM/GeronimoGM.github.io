@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ContactForm } from '../../components/index/contact-form/contact-form';
 import { EducationCard } from '../../components/index/education-card/education-card';
 import { ExperienceCard } from '../../components/index/experience-card/experience-card';
 import { Button } from '../../components/shared/button/button';
@@ -9,7 +10,7 @@ import { Experience } from '../../types/experience';
 
 @Component({
   selector: 'app-index-page',
-  imports: [Button, Svg, ExperienceCard, Pill, EducationCard],
+  imports: [Button, Svg, ExperienceCard, Pill, EducationCard, ContactForm],
   template: `
     <section class="flex min-h-[calc(100dvh-80px)] justify-center items-center">
       <div class="flex flex-col max-w-2xl mx-auto gap-4">
@@ -125,6 +126,17 @@ import { Experience } from '../../types/experience';
       @for (education of educations; track $index) {
         <app-education-card [education]="education" />
       }
+    </section>
+
+    <section>
+      <h2
+        id="contact"
+        i18n="@@header.contact"
+        class="inline-flex items-center gap-2 text-text-primary text-2xl"
+      >
+        <app-svg name="mail" /> Contacto
+      </h2>
+      <app-contact-form class="flex justify-center items-center" />
     </section>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
