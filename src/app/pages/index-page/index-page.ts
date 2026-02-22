@@ -1,13 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { EducationCard } from '../../components/index/education-card/education-card';
 import { ExperienceCard } from '../../components/index/experience-card/experience-card';
 import { Button } from '../../components/shared/button/button';
 import { Pill } from '../../components/shared/pill/pill';
 import { Svg } from '../../components/shared/svg/svg';
+import { Education } from '../../types/education';
 import { Experience } from '../../types/experience';
 
 @Component({
   selector: 'app-index-page',
-  imports: [Button, Svg, ExperienceCard, Pill],
+  imports: [Button, Svg, ExperienceCard, Pill, EducationCard],
   template: `
     <section class="flex min-h-[calc(100dvh-80px)] justify-center items-center">
       <div class="flex flex-col max-w-2xl mx-auto gap-4">
@@ -59,6 +61,7 @@ import { Experience } from '../../types/experience';
         </div>
       </div>
     </section>
+
     <section>
       <h2
         id="experience"
@@ -110,6 +113,19 @@ import { Experience } from '../../types/experience';
         <p class="bg-white text-green-700 border border-bg-contrast" app-pill icon="nginx">Nginx</p>
       </app-experience-card>
     </section>
+
+    <section>
+      <h2
+        id="education"
+        i18n="@@header.education"
+        class="inline-flex items-center gap-2 text-text-primary text-2xl"
+      >
+        <app-svg name="graduation-cap" /> Educación
+      </h2>
+      @for (education of educations; track $index) {
+        <app-education-card [education]="education" />
+      }
+    </section>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -127,13 +143,32 @@ export class IndexPage {
     externalLink: 'https://compraaca.com.ar',
   };
   protected readonly utnEmpleos: Experience = {
-    time: $localize`:@@utn.time:Junio 2024 - Presente`,
+    time: $localize`:@@utn-empleos.time:Junio 2024 - Presente`,
     imgSrc: '/assets/img/utn-empleos-cover.webp',
-    imgAlt: $localize`:@@utn.imgAlt:Previsualización de la página de UTN Empleos`,
+    imgAlt: $localize`:@@utn-empleos.imgAlt:Previsualización de la página de UTN Empleos`,
     routerLink: '/experience/utn-empleos', // TODO: cambiar
     position: 'Full Stack Developer',
     company: 'Universidad Tecnológica Nacional',
-    summary: $localize`:@@utn.summary:Plataforma institucional orientada a conectar estudiantes y graduados con oportunidades laborales. Permite la publicación y gestión de ofertas, facilitando el vínculo entre empresas y la comunidad académica.`,
+    summary: $localize`:@@utn-empleos.summary:Plataforma institucional orientada a conectar estudiantes y graduados con oportunidades laborales. Permite la publicación y gestión de ofertas, facilitando el vínculo entre empresas y la comunidad académica.`,
     externalLink: 'https://bolsatrabajo.mdp.utn.edu.ar',
   };
+
+  protected readonly educations: Education[] = [
+    {
+      time: $localize`:@@utn.time:Marzo 2022 - Febrero 2025`,
+      imgSrc: '/assets/img/utn-logo.png',
+      imgAlt: $localize`:@@utn.imgAlt:Logo de la Universidad Tecnológica Nacional`,
+      degree: $localize`:@@utn.degree:Tecnicatura Universitaria en Programación`,
+      university: 'Universidad Tecnológica Nacional',
+      gpa: $localize`:@@utn.gpa:Promedio: 8,95`,
+    },
+    {
+      time: $localize`:@@cambridge.time:Diciembre 2024`,
+      imgSrc: '/assets/img/cambridge-logo.webp',
+      imgAlt: $localize`:@@cambridge.imgAlt:Logo de Cambridge`,
+      degree: 'First Certificate in English (B2)',
+      university: 'Cambridge University',
+      gpa: $localize`:@@cambridge.gpa:Nota: 176/200`,
+    },
+  ];
 }
