@@ -12,7 +12,7 @@ import { Experience } from '../../types/experience';
   selector: 'app-index-page',
   imports: [Button, Svg, ExperienceCard, Pill, EducationCard, ContactForm],
   template: `
-    <section class="flex min-h-[calc(100dvh-80px)] justify-center items-center">
+    <section id="about" class="flex min-h-[calc(100dvh-80px)] justify-center items-center">
       <div class="flex flex-col max-w-2xl mx-auto gap-4">
         <div class="flex items-center gap-4 mb-2">
           <img

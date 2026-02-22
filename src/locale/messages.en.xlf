@@ -55,6 +55,30 @@
         <target>Preview</target>
       </segment>
     </unit>
+    <unit id="nav.about">
+      <segment>
+        <source>Sobre mí</source>
+        <target>About me</target>
+      </segment>
+    </unit>
+    <unit id="nav.experience">
+      <segment>
+        <source>Experiencia</source>
+        <target>Experience</target>
+      </segment>
+    </unit>
+    <unit id="nav.education">
+      <segment>
+        <source>Educación</source>
+        <target>Education</target>
+      </segment>
+    </unit>
+    <unit id="nav.contact">
+      <segment>
+        <source>Contacto</source>
+        <target>Contact</target>
+      </segment>
+    </unit>
     <unit id="theme.light">
       <notes>
         <note category="location">src/app/components/shared/header/header.ts:36,37</note>

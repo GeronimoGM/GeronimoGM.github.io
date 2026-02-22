@@ -41,12 +41,36 @@
         <source>Enviar</source>
       </segment>
     </unit>
-    <unit id="button.previewExperience">
+    <unit id="nav.about">
       <notes>
-        <note category="location">src/app/components/index/experience-card/experience-card.ts:42,44</note>
+        <note category="location">src/app/components/shared/header/header.ts:20,21</note>
       </notes>
       <segment>
-        <source>Ver</source>
+        <source>Sobre mí</source>
+      </segment>
+    </unit>
+    <unit id="nav.experience">
+      <notes>
+        <note category="location">src/app/components/shared/header/header.ts:21,22</note>
+      </notes>
+      <segment>
+        <source>Experiencia</source>
+      </segment>
+    </unit>
+    <unit id="nav.education">
+      <notes>
+        <note category="location">src/app/components/shared/header/header.ts:22,23</note>
+      </notes>
+      <segment>
+        <source>Educación</source>
+      </segment>
+    </unit>
+    <unit id="nav.contact">
+      <notes>
+        <note category="location">src/app/components/shared/header/header.ts:23,25</note>
+      </notes>
+      <segment>
+        <source>Contacto</source>
       </segment>
     </unit>
     <unit id="theme.light">
@@ -182,7 +206,7 @@
     </unit>
     <unit id="utn-empleos.time">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:158</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:157</note>
       </notes>
       <segment>
         <source>Junio 2024 - Presente</source>
@@ -190,7 +214,7 @@
     </unit>
     <unit id="utn-empleos.imgAlt">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:160</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:159</note>
       </notes>
       <segment>
         <source>Previsualización de la página de UTN Empleos</source>
@@ -198,7 +222,7 @@
     </unit>
     <unit id="utn-empleos.summary">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:164</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:163</note>
       </notes>
       <segment>
         <source>Plataforma institucional orientada a conectar estudiantes y graduados con oportunidades laborales. Permite la publicación y gestión de ofertas, facilitando el vínculo entre empresas y la comunidad académica.</source>
@@ -206,7 +230,7 @@
     </unit>
     <unit id="utn.time">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:170</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:168</note>
       </notes>
       <segment>
         <source>Marzo 2022 - Febrero 2025</source>
@@ -214,7 +238,7 @@
     </unit>
     <unit id="utn.imgAlt">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:172</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:170</note>
       </notes>
       <segment>
         <source>Logo de la Universidad Tecnológica Nacional</source>
@@ -222,7 +246,7 @@
     </unit>
     <unit id="utn.degree">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:173</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:171</note>
       </notes>
       <segment>
         <source>Tecnicatura Universitaria en Programación</source>
@@ -230,7 +254,7 @@
     </unit>
     <unit id="utn.gpa">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:175</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:173</note>
       </notes>
       <segment>
         <source>Promedio: 8,95</source>
@@ -238,7 +262,7 @@
     </unit>
     <unit id="cambridge.time">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:178</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:176</note>
       </notes>
       <segment>
         <source>Diciembre 2024</source>
@@ -246,7 +270,7 @@
     </unit>
     <unit id="cambridge.imgAlt">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:180</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:178</note>
       </notes>
       <segment>
         <source>Logo de Cambridge</source>
@@ -254,7 +278,7 @@
     </unit>
     <unit id="cambridge.gpa">
       <notes>
-        <note category="location">src/app/pages/index-page/index-page.ts:183</note>
+        <note category="location">src/app/pages/index-page/index-page.ts:181</note>
       </notes>
       <segment>
         <source>Nota: 176/200</source>
