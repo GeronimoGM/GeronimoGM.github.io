@@ -12,7 +12,6 @@ export class LanguageService {
 
   public changeLanguage(language: 'es' | 'en') {
     if (isPlatformBrowser(this.platformId)) {
-      console.log(`/${language}${this.router.url}`);
       window.location.href = `/${language}${this.router.url}`;
     }
   }
