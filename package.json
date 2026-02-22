@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --localize",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:GeronimoGM.github.io": "node dist/GeronimoGM.github.io/server/server.mjs"
@@ -52,5 +52,8 @@
     "tailwindcss": "^4.1.12",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }

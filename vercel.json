@@ -1,11 +1,5 @@
 {
-  "buildCommand": "ng build --localize",
-  "outputDirectory": "dist/portfolio/browser",
-  "functions": {
-    "dist/portfolio/server/server.mjs": {
-      "runtime": "nodejs24.x"
-    }
-  },
+  "buildCommand": "npm run build",
   "routes": [
     {
       "src": "/(.*)",
