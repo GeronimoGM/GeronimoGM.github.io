@@ -18,6 +18,7 @@ import { Svg } from '../../shared/svg/svg';
           <a
             class="inline-flex items-center gap-1 text-accent hover:underline"
             [href]="experience().href"
+            target="_blank"
           >
             <h3 class=" text-xl">{{ experience().company }}</h3>
             <app-svg name="link" size="xs" />
