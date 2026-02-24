@@ -15,7 +15,7 @@ import { LanguageService } from './services/language-service';
       <router-outlet />
     </main>
 
-    <footer class="border-t border-border px-responsive py-6 flex justify-center items-center">
+    <footer class="px-responsive py-6 flex justify-center items-center">
       <a
         aria-label="GitHub"
         app-button
