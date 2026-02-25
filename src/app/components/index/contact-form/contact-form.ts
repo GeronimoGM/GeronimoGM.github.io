@@ -12,7 +12,7 @@ import { Button } from '../../shared/button/button';
       class="flex flex-col gap-4 bg-card p-8 shadow-2xl rounded w-full *:flex *:flex-col *:gap-1 sm:max-w-1/2"
     >
       <div>
-        <label for="email"> Email </label>
+        <label class="after:text-red-500 after:content-['*']" for="email"> Email </label>
         <input
           class="border rounded-md p-2 outline-highlight outline-offset-1 focus:outline-2"
           type="email"
@@ -40,7 +40,9 @@ import { Button } from '../../shared/button/button';
         }
       </div>
       <div>
-        <label i18n="@@form.message" for="message"> Mensaje </label>
+        <label class="after:text-red-500 after:content-['*']" i18n="@@form.message" for="message">
+          Mensaje
+        </label>
         <textarea
           class="border rounded-md p-2 outline-highlight outline-offset-1 focus:outline-2"
           id="message"

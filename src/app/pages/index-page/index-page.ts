@@ -5,14 +5,15 @@ import { ExperienceCard } from '../../components/index/experience-card/experienc
 import { Button } from '../../components/shared/button/button';
 import { Pill } from '../../components/shared/pill/pill';
 import { Svg } from '../../components/shared/svg/svg';
+import { Fade } from '../../directives/fade';
 import { Education } from '../../types/education';
 import { Experience } from '../../types/experience';
 
 @Component({
   selector: 'app-index-page',
-  imports: [Button, Svg, ExperienceCard, Pill, EducationCard, ContactForm],
+  imports: [Button, Svg, ExperienceCard, Pill, EducationCard, ContactForm, Fade],
   template: `
-    <section class="flex min-h-[calc(100dvh-80px)] justify-center items-center">
+    <section id="about" class="flex min-h-[calc(100dvh-80px)] justify-center items-center" appFade>
       <div class="flex flex-col max-w-2xl mx-auto gap-4">
         <div class="flex items-center gap-4 mb-2">
           <img
@@ -63,7 +64,7 @@ import { Experience } from '../../types/experience';
       </div>
     </section>
 
-    <section>
+    <section appFade>
       <h2
         id="experience"
         i18n="@@header.experience"
@@ -71,7 +72,7 @@ import { Experience } from '../../types/experience';
       >
         <app-svg name="briefcase" /> Experiencia
       </h2>
-      <app-experience-card [experience]="compraaca">
+      <app-experience-card [experience]="compraaca" appFade direction="right">
         <p
           class="bg-linear-to-r from-blue-500 via-fuchsia-500 to-red-500 text-white"
           app-pill
@@ -96,7 +97,7 @@ import { Experience } from '../../types/experience';
         <p class="bg-white text-green-700 border border-bg-contrast" app-pill icon="nginx">Nginx</p>
         <p class="bg-black text-white" app-pill icon="github">GitHub Actions</p>
       </app-experience-card>
-      <app-experience-card [experience]="utnEmpleos">
+      <app-experience-card [experience]="utnEmpleos" appFade direction="left">
         <p
           class="bg-linear-to-r from-blue-500 via-fuchsia-500 to-red-500 text-white"
           app-pill
@@ -115,7 +116,7 @@ import { Experience } from '../../types/experience';
       </app-experience-card>
     </section>
 
-    <section>
+    <section appFade>
       <h2
         id="education"
         i18n="@@header.education"
@@ -124,11 +125,11 @@ import { Experience } from '../../types/experience';
         <app-svg name="graduation-cap" /> Educación
       </h2>
       @for (education of educations; track $index) {
-        <app-education-card [education]="education" />
+        <app-education-card [education]="education" appFade direction="right" />
       }
     </section>
 
-    <section>
+    <section appFade>
       <h2
         id="contact"
         i18n="@@header.contact"
@@ -136,7 +137,7 @@ import { Experience } from '../../types/experience';
       >
         <app-svg name="mail" /> Contacto
       </h2>
-      <app-contact-form class="flex justify-center items-center" />
+      <app-contact-form class="flex justify-center items-center" appFade direction="left" />
     </section>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

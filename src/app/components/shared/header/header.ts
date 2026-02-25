@@ -17,10 +17,10 @@ import { Svg } from '../svg/svg';
       <nav
         class="hidden self-start items-center justify-between gap-4 sm:flex text-sm [&>a]:text-text-secondary [&>a]:hover:text-accent [&>a]:transition-colors [&>a]:duration-300 [&>a]:border-b [&>a]:border-transparent [&>a]:hover:border-accent translate-y-0.5"
       >
-        <a href="#">Sobre mí</a>
-        <a href="#">Experiencia</a>
-        <a href="#">Educación</a>
-        <a href="#">Contacto</a>
+        <a i18n="@@nav.about" href="#about">Sobre mí</a>
+        <a i18n="@@nav.experience" href="#experience">Experiencia</a>
+        <a i18n="@@nav.education" href="#education">Educación</a>
+        <a i18n="@@nav.contact" href="#contact">Contacto</a>
       </nav>
       <app-overlay [buttonLabel]="themeLabel()" [buttonIcon]="theme()" [(visible)]="visible">
         <button
