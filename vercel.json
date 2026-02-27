@@ -13,5 +13,6 @@
     "api/index.js": {
       "includeFiles": "dist/portfolio/**"
     }
-  }
+  },
+  "redirects": [{ "source": "/", "destination": "/es", "permanent": true }]
 }
